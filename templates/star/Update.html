@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'star/Base.html'%}
+{%block child_block%}
+<div class=""container" align="center">
+<h1 style="color:purple"> Please Update Records</h1>
+<form method="POST">
+    {% csrf_token %}
+    <table border="2" cellpadding="10" cellspacing="10" bgcolor="cyan" align="center">
+        <tr><td>NO </td><td><input type="text" name="No" value="{{student.No}}"></td></tr><br>
+        <tr><td>NAME</td><td><input type="text" name="Name" value="{{student.Name}}"></td></tr><br>
+        <tr><td>MARKS </td><td><input type="text" name="Marks" value="{{student.Marks}}"></td></tr><br>
+        <tr><td>ADDRESS</td><td><input type="text" name="Address" value="{{student.Address}}"></td></tr><br>
+
+    <tr><td></td><td><input type="submit" value="Update Record" class="btn btn-primary btn-lg"></td></tr>
+        </table>
+</form>
+</div>
+{% endblock %}

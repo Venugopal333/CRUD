@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'star/Base.html'%}
+{%block child_block%}
+<div class=""container" align="center">
+<h1 style="color:purple"> Please Provide The Information</h1>
+
+<form method="POST" >
+    <table border="5" cellspacing="10" cellpadding="10" bgcolor="cyan">
+    {{form.as_table}}
+    {%csrf_token%}
+        </table>
+    <table bordet="5" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>
+    <input type="submit" value="Insert Record" class="btn btn-primary btn-lg">
+            </td>
+            <td>
+                <a href="/Show" class="btn btn-primary btn-lg">Show Details</a>
+            </td>
+        </tr>
+</table>
+</form>
+<br><br>
+
+</div>
+{%endblock%}
